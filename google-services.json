@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "109639799572",
+    "project_id": "crm-android-b2a92",
+    "storage_bucket": "crm-android-b2a92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109639799572:android:43d9cf9ba8637e6ae2e801",
+        "android_client_info": {
+          "package_name": "com.nebrija.crm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg81Ym_3d5p3Nhqa8tL2s-l0A4D36DmvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

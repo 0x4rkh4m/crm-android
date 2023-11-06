@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CRM"
-        tools:targetApi="31">
+        tools:targetApi="34">
         <!-- Change Main Activity for Dagger Hilt App in android:name -->
         <activity
             android:name=".CRMApp"

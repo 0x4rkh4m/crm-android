@@ -1,4 +1,4 @@
-package com.nebrija.crm.ui.theme
+package com.nebrija.crm.core.ui.theme
 
 import android.app.Activity
 import android.os.Build

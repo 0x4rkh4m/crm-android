@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "109639799572",
+    "project_id": "crm-android-b2a92",
+    "storage_bucket": "crm-android-b2a92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109639799572:android:43d9cf9ba8637e6ae2e801",
+        "android_client_info": {
+          "package_name": "com.nebrija.crm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109639799572-bocom3lp5mm1dr2pgvbl0uvrvt6gan07.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nebrija.crm",
+            "certificate_hash": "82892407a5ed17146f7fea4cedfca945ec1cbacb"
+          }
+        },
+        {
+          "client_id": "109639799572-vq9nqbsatcfil8el3tgubi5jpp0fq9r2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg81Ym_3d5p3Nhqa8tL2s-l0A4D36DmvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109639799572-vq9nqbsatcfil8el3tgubi5jpp0fq9r2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

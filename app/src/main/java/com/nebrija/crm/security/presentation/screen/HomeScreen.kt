@@ -52,7 +52,7 @@ fun HomeScreen(viewModel: AuthViewModel?, navController: NavHostController) {
         )
 
         Image(
-            painter = painterResource(id = R.drawable.ic_person),
+            painter = painterResource(id = R.drawable.ic_launcher_foreground),
             contentDescription = stringResource(id = R.string.empty),
             modifier = Modifier.size(128.dp)
         )

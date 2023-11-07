@@ -150,7 +150,10 @@ fun SignupScreen(viewModel: AuthViewModel?, navController: NavHostController) {
                 width = Dimension.fillToConstraints
             }
         ) {
-            Text(text = stringResource(id = R.string.signup), style = MaterialTheme.typography.titleMedium)
+            Text(
+                text = stringResource(id = R.string.signup),
+                style = MaterialTheme.typography.titleMedium
+            )
         }
 
 
@@ -178,6 +181,7 @@ fun SignupScreen(viewModel: AuthViewModel?, navController: NavHostController) {
                     val context = LocalContext.current
                     Toast.makeText(context, it.exception.message, Toast.LENGTH_LONG).show()
                 }
+
                 Response.Loading -> {
                     CircularProgressIndicator(modifier = Modifier.constrainAs(refLoader) {
                         top.linkTo(parent.top)
@@ -186,6 +190,7 @@ fun SignupScreen(viewModel: AuthViewModel?, navController: NavHostController) {
                         end.linkTo(parent.end)
                     })
                 }
+
                 is Response.Success -> {
                     LaunchedEffect(Unit) {
                         navController.navigate(ROUTE_HOME) {

@@ -6,10 +6,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.nebrija.crm.security.presentation.viewModel.AuthViewModel
 import com.nebrija.crm.security.presentation.screen.HomeScreen
 import com.nebrija.crm.security.presentation.screen.LoginScreen
 import com.nebrija.crm.security.presentation.screen.SignupScreen
+import com.nebrija.crm.security.presentation.viewModel.AuthViewModel
 
 @Composable
 fun AppNavHost(

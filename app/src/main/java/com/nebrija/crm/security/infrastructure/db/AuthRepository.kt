@@ -7,6 +7,7 @@ import com.nebrija.crm.core.utils.await
 import com.nebrija.crm.security.application.response.Response
 import com.nebrija.crm.security.domain.repository.AuthRepository
 import javax.inject.Inject
+
 class AuthRepository @Inject constructor(
     private val firebaseAuth: FirebaseAuth
 ) : AuthRepository {
@@ -24,10 +25,16 @@ class AuthRepository @Inject constructor(
         }
     }
 
-    override suspend fun signup(name: String, email: String, password: String): Response<FirebaseUser> {
+    override suspend fun signup(
+        name: String,
+        email: String,
+        password: String
+    ): Response<FirebaseUser> {
         return try {
             val result = firebaseAuth.createUserWithEmailAndPassword(email, password).await()
-            result.user?.updateProfile(UserProfileChangeRequest.Builder().setDisplayName(name).build())?.await()
+            result.user?.updateProfile(
+                UserProfileChangeRequest.Builder().setDisplayName(name).build()
+            )?.await()
             return Response.Success(result.user!!)
         } catch (e: Exception) {
             e.printStackTrace()

@@ -129,7 +129,10 @@ fun LoginScreen(viewModel: AuthViewModel?, navController: NavController) {
                 width = Dimension.fillToConstraints
             }
         ) {
-            Text(text = stringResource(id = R.string.login), style = MaterialTheme.typography.titleMedium)
+            Text(
+                text = stringResource(id = R.string.login),
+                style = MaterialTheme.typography.titleMedium
+            )
         }
 
 
@@ -157,6 +160,7 @@ fun LoginScreen(viewModel: AuthViewModel?, navController: NavController) {
                     val context = LocalContext.current
                     Toast.makeText(context, it.exception.message, Toast.LENGTH_LONG).show()
                 }
+
                 Response.Loading -> {
                     CircularProgressIndicator(modifier = Modifier.constrainAs(refLoader) {
                         top.linkTo(parent.top)
@@ -165,6 +169,7 @@ fun LoginScreen(viewModel: AuthViewModel?, navController: NavController) {
                         end.linkTo(parent.end)
                     })
                 }
+
                 is Response.Success -> {
                     LaunchedEffect(Unit) {
                         navController.navigate(ROUTE_HOME) {

@@ -2,11 +2,11 @@ package com.nebrija.crm.di
 
 import com.google.firebase.auth.FirebaseAuth
 import com.nebrija.crm.security.domain.repository.AuthRepository
-import com.nebrija.crm.security.infrastructure.db.AuthRepository as AuthRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import com.nebrija.crm.security.infrastructure.db.AuthRepository as AuthRepositoryImpl
 
 @InstallIn(SingletonComponent::class)
 @Module

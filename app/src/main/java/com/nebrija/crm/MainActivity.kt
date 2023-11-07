@@ -1,38 +1,25 @@
 package com.nebrija.crm
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SnackbarHost
-import androidx.compose.material3.SnackbarHostState
-import androidx.compose.runtime.remember
+import androidx.appcompat.app.AppCompatActivity
 import com.nebrija.crm.core.ui.theme.CRMTheme
 import com.nebrija.crm.navigation.AppNavHost
 import com.nebrija.crm.security.presentation.viewModel.AuthViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : ComponentActivity() {
-    private val authViewModel by viewModels<AuthViewModel>()
+class MainActivity : AppCompatActivity() {
 
-    @OptIn(ExperimentalMaterial3Api::class)
-    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+    private val viewModel by viewModels<AuthViewModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val snackbarHostState = remember { SnackbarHostState() }
-            Scaffold(
-                snackbarHost = { SnackbarHost(snackbarHostState) },
-                content = {
-                   CRMTheme {
-                        AppNavHost(authViewModel)
-                    }
-                }
-            )
+            CRMTheme {
+                AppNavHost(viewModel)
+            }
         }
     }
 }

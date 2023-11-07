@@ -12,9 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CRM"
         tools:targetApi="34">
-        <!-- Change Main Activity for Dagger Hilt App in android:name -->
         <activity
-            android:name=".CRMApp"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.CRM">
